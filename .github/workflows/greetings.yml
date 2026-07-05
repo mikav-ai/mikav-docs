@@ -9,8 +9,20 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Message that will be displayed on users' first issue"
-        pr-message: "Message that will be displayed on users' first pull request"
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 Welcome to Mikav Docs! Thanks for opening your first issue.
+            We'll take a look as soon as we can. In the meantime, please make sure you've:
+            - Searched existing issues for duplicates
+            - Provided clear steps to reproduce (if it's a bug)
+
+            Feel free to join the conversation at https://github.com/orgs/mikav-ai/discussions
+          pr-message: |
+            🎉 Welcome to Mikav Docs! Thanks for your first pull request.
+            A maintainer will review it shortly. Please make sure:
+            - Your changes build successfully (`npm run build`)
+            - You've followed our [Contributing Guidelines](CONTRIBUTING.md)
+
+            Thank you for helping improve Mikav! 🙏

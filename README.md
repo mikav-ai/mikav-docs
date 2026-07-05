@@ -1,41 +1,101 @@
-# Website
+<p align="center">
+  <img src="static/img/logo.svg" alt="Mikav Logo" width="120" />
+</p>
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+<h1 align="center">Mikav Docs</h1>
 
-## Installation
+<p align="center">
+  <strong>Documentation for Mikav — the open-source AI copilot and open Malayalam model powering Kerala's creative and cultural ecosystem.</strong>
+</p>
+
+<p align="center">
+  <a href="https://docs.mikav.in">Live Docs</a> •
+  <a href="https://github.com/mikav-ai/mikav-docs">GitHub</a> •
+  <a href="CONTRIBUTING.md">Contribute</a> •
+  <a href="ROADMAP.md">Roadmap</a>
+</p>
+
+---
+
+## About
+
+Mikav is an open-source AI copilot and open Malayalam model powering Kerala's creative and cultural ecosystem — built for everyone to use, and for businesses to build on.
+
+This repository contains the documentation site for the Mikav project, built with [Docusaurus](https://docusaurus.io/).
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) >= 20.0
+- npm (comes with Node.js)
+
+### Installation
 
 ```bash
-yarn
+npm install
 ```
 
-## Local Development
+### Local Development
 
 ```bash
-yarn start
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This starts a local dev server at `http://localhost:3000`. Changes are reflected live without restarting.
 
-## Build
+### Build
 
 ```bash
-yarn build
+npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Generates static content into the `build/` directory.
+
+### Serve Production Build Locally
+
+```bash
+npm run serve
+```
+
+## Project Structure
+
+```
+mikav-docs/
+├── docs/              # Documentation pages (MDX)
+├── src/
+│   ├── components/    # React components
+│   ├── css/           # Global styles
+│   └── pages/         # Standalone pages
+├── static/            # Static assets (images, fonts)
+├── docusaurus.config.ts
+├── sidebars.ts
+└── amplify.yml        # AWS Amplify build config
+```
 
 ## Deployment
 
-Using SSH:
+This site is deployed on **AWS Amplify** and auto-deploys from the `main` branch.
 
-```bash
-USE_SSH=true yarn deploy
-```
+- Production: [https://docs.mikav.in](https://docs.mikav.in)
 
-Not using SSH:
+## Contributing
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## License
+
+This project is licensed under the Apache License 2.0 — see [LICENSE](LICENSE) for details.
+
+## Community
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+- [Changelog](CHANGELOG.md)
+- [GitHub Discussions](https://github.com/orgs/mikav-ai/discussions)
+
+---
+
+<p align="center">
+  Made with ❤️ in Kerala 🌴
+</p>
